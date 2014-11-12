@@ -18,11 +18,11 @@ public class Matematicas{
 		return Math.abs(Math.cbrt(this.numero));
 	}
 	//metodo que redondea un numero y si es negativo lo convierte a negativo
-	public double redondeo(){
+	public long redondeo(){
 		return Math.abs(Math.round(this.numero));
 	}
-	//metodo que devuelve aleatoriamente 0, 1, o 2
-	public double numeroAleatorio(){
+	//metodo que devuelve aleatoriamente entre 0 y el numero elegido
+	public long numeroAleatorio(){
 		return Math.round(Math.random()*this.numero);
 	}
 
@@ -31,7 +31,7 @@ class TestMatematicas{
 	public static void main(String[]ar){
 		Matematicas n1=new Matematicas();
 		
-		n1.setNumero(-312.88888);
+		n1.setNumero(958888);
 		System.out.println("Raiz cuadrada de " +n1.getNumero()+" = "+n1.raizCuadrada());
 		System.out.println("Raiz cubica de " +n1.getNumero()+" = "+n1.raizCubica());
 		System.out.println("Redondeo y valor absoluto de " +n1.getNumero()+" = "+n1.redondeo());
