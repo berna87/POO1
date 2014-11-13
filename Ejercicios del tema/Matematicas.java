@@ -17,7 +17,7 @@ public class Matematicas{
 	public double raizCubica(){
 		return Math.abs(Math.cbrt(this.numero));
 	}
-	//metodo que redondea un numero y si es negativo lo convierte a negativo
+	//metodo que redondea un numero y si es negativo lo convierte a positivo
 	public long redondeo(){
 		return Math.abs(Math.round(this.numero));
 	}
