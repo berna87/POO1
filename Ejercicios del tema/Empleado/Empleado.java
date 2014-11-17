@@ -3,8 +3,8 @@ public class Empleado{
 	private String nombre;
 	private int horasS;  //horas trabajadas por semana
 	private double sueldoH; //sueldo bruto por hora trabajada
-	private double deduccionH; //deduccion para hacienda
-	private double deduccionSS; //deduccion para la Seguridad Social
+	private double deduccionH; //deduccion para hacienda, cifra en euros
+	private double deduccionSS; //deduccion para la Seguridad Social, cifra en euros
 	
 	public Empleado(String nom,int h,double s, double dh, double dss){
 		this.nombre=nom;
@@ -14,21 +14,19 @@ public class Empleado{
 		this.deduccionSS=dss;
 	}
 	
-	
-	public double sueldoNetoSemana(){
+	public double sueldoBrutoSemana(){
 		return this.horasS*this.sueldoH;
 	}
 	public double deduccionesTotales(){
 		return this.deduccionH+this.deduccionSS;
 	}
 	
-	public double sueldoBrutoMes(){
-		return (this.sueldoNetoSemana() * 4) - this.deduccionesTotales();
+	public double sueldoNetoSemana(){
+		return this.sueldoBrutoSemana() - this.deduccionesTotales();
 	}
+	@Override
 	public String toString(){
-		return "Empleado: "+this.nombre+ "\nSueldo bruto: " +this.sueldoBrutoMes()+"\nSueldo por semana: "+this.sueldoNetoSemana()+"\nDeducciones totales: "+this.deduccionesTotales();
-	
-	
+		return "Empleado: "+this.nombre+ "\nSueldo bruto: " +this.sueldoNetoSemana()+"\nSueldo por semana: "+this.sueldoBrutoSemana()+"\nDeducciones totales: "+this.deduccionesTotales();
 	}
 }
 

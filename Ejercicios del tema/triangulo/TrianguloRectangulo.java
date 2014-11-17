@@ -25,6 +25,7 @@ public class TrianguloRectangulo{
 	public double perimetro(){
 		return this.cateto1+this.cateto2+this.hipotenusa();
 	}
+	@Override
 	public String toString(){
 		return "El triangulo cuyos catetos son : " + this.cateto1 + "cm y " +this.cateto2 + "cm\n tiene una hipotenusa de: " +this.hipotenusa()+"cm\n tiene un area de: "+this.area()+"cm\u00B2\n tiene un perimetro de: "+this.perimetro()+"cm";
 	}
@@ -33,12 +34,12 @@ public class TrianguloRectangulo{
 class TestTrianguloRectangulo{
 	public static void main(String[]ar){
 		TrianguloRectangulo t1 = new TrianguloRectangulo();
-		String var1 = JOptionPane.showInputDialog("Introduce el Cateto 1");
-		double c1 = Double.parseDouble(var1);
-		String var2 = JOptionPane.showInputDialog("Introduce el Cateto 2");
+		String var1 = JOptionPane.showInputDialog("Introduce el Cateto 1"); //solicita por JOptionPane el valor de un cateto
+		double c1 = Double.parseDouble(var1);  //convierte el contenido de var1 que es un String en un double
+		String var2 = JOptionPane.showInputDialog("Introduce el Cateto 2"); //repito la operacion para el cateto2
 		double c2 = Double.parseDouble(var2);
 		t1.setCateto1(c1);
 		t1.setCateto2(c2);
-		JOptionPane.showMessageDialog(null,t1);
+		JOptionPane.showMessageDialog(null,t1); //mostrar el contenido de toString usando JOptionPane
 	}	
 }
