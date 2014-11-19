@@ -27,7 +27,7 @@ public class Ecuacion {
 			return this.valorB*this.valorB-4*this.valorA*this.valorC>=0;
 		}
 		public String toString(){
-			if (resoluble()==true){  
+			if (resoluble()){  
 			return "En la ecuacion: \u0028"+getValorA()+"\u0029*x\u00B2 + \u0028"+getValorB()+"\u0029*x + \u0028"+getValorC()+"\u0029 = 0 \n x1= "+x1()+" \n x2= "+x2();	
 			} 
 			else { 

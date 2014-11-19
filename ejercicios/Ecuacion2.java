@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 public class Ecuacion2{    //ecuacion segundo grado con get y set
 	//variables que necesitare para trabajar internamente
 	private double a;
